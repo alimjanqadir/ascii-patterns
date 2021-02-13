@@ -4,11 +4,29 @@
 package patterns;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+    public void generateHalfPyramid(int base) {
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public void generatePyramid(int base) {
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < base - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < i + 1; k++) {
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        App app = new App();
+        app.generatePyramid(5);
     }
 }
