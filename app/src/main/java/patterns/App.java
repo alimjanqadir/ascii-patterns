@@ -25,8 +25,34 @@ public class App {
         }
     }
 
+    public void generateSquare(int base) {
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+    }
+
+    public void generateVerticalOrderedSquare(int base) {
+        for (int i = 1; i <= base; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.printf(" %d", i);
+            }
+            System.out.println();
+        }
+    }
+
+    public void generateHorizontalOrderedSquare(int base) {
+        for (int i = 1; i <= base; i++) {
+            for (int j = 1; j <= base; j++) {
+                System.out.printf(" %d", j);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         App app = new App();
-        app.generatePyramid(5);
     }
 }
