@@ -52,6 +52,28 @@ public class App {
         }
     }
 
+    public void generateCharSquare(int base) {
+        for (int i = 0; i < base; i++) {
+            for (char c = 'A'; c <= 'A' + base; c++) {
+                System.out.printf(" %c", c);
+            }
+            System.out.println();
+        }
+    }
+
+    public void generateCharSquareOrderedHorizontally(int base) {
+        generateCharSquare(base);
+    }
+
+    public void generateCharSquareOrderedVertically(int base) {
+        for (char c = 'A'; c <= 'A' + base; c++) {
+            for (int i = 0; i < base; i++) {
+                System.out.printf(" %c", c);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         App app = new App();
     }
