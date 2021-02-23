@@ -35,18 +35,18 @@ public class App {
     }
 
     public void generateVerticalOrderedSquare(int base) {
-        for (int i = 1; i <= base; i++) {
+        for (int i = 0; i < base; i++) {
             for (int j = 0; j < base; j++) {
-                System.out.printf(" %d", i);
+                System.out.printf(" %d", i + 1);
             }
             System.out.println();
         }
     }
 
     public void generateHorizontalOrderedSquare(int base) {
-        for (int i = 1; i <= base; i++) {
-            for (int j = 1; j <= base; j++) {
-                System.out.printf(" %d", j);
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.printf(" %d", j + 1);
             }
             System.out.println();
         }
@@ -54,7 +54,7 @@ public class App {
 
     public void generateCharSquare(int base) {
         for (int i = 0; i < base; i++) {
-            for (char c = 'A'; c <= 'A' + base; c++) {
+            for (char c = 'A'; c < 'A' + base; c++) {
                 System.out.printf(" %c", c);
             }
             System.out.println();
@@ -66,7 +66,7 @@ public class App {
     }
 
     public void generateCharSquareOrderedVertically(int base) {
-        for (char c = 'A'; c <= 'A' + base; c++) {
+        for (char c = 'A'; c < 'A' + base; c++) {
             for (int i = 0; i < base; i++) {
                 System.out.printf(" %c", c);
             }
@@ -76,5 +76,6 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
+        app.generateCharSquareOrderedVertically(5);
     }
 }
