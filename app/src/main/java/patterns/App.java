@@ -74,8 +74,27 @@ public class App {
         }
     }
 
+    public void generateCharSquareReversedHorizontally(int base) {
+        for (int i = 0; i < base; i++) {
+            char start = (char) ('A' + base - 1);
+            for (char c = start; c >= 'A'; c--) {
+                System.out.printf(" %c", c);
+            }
+            System.out.println();
+        }
+    }
+
+    public void generateCharSquareReversedVertically(int base) {
+        char start = (char) ('A' + base - 1);
+        for (char c = start; c >= 'A'; c--) {
+            for (int i = 0; i < base; i++) {
+                System.out.printf(" %c", c);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         App app = new App();
-        app.generateCharSquareOrderedVertically(5);
     }
 }
