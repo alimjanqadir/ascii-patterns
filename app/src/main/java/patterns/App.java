@@ -94,7 +94,19 @@ public class App {
         }
     }
 
+    public void generateNumericSquareWithEnumeration(int base) {
+        int increment = 0;
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.printf(" %2d",(j + 1) + (increment * base));
+            }
+            increment += 1;
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         App app = new App();
+        app.generateNumericSquareWithEnumeration(5);
     }
 }
