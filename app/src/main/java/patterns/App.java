@@ -94,19 +94,43 @@ public class App {
         }
     }
 
-    public void generateNumericSquareWithEnumeration(int base) {
+    public void generateNumericSquareWithEnumerationStartWithOne(int base) {
         int increment = 0;
         for (int i = 0; i < base; i++) {
             for (int j = 0; j < base; j++) {
-                System.out.printf(" %2d",(j + 1) + (increment * base));
+                System.out.printf(" %2d", (j + 1) + (increment * base));
             }
             increment += 1;
             System.out.println();
         }
     }
 
+    public void generateNumericSquareWithEnumerationStartWithOne(int base, int step) {
+        int increment = 0;
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.printf(" %2d", increment + 1);
+                increment += step;
+            }
+            System.out.println();
+        }
+
+    }
+
+    public void generateNumericSquareWithEnumerationStartWithStepValue(int base, int step) {
+        int increment = 2;
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.printf(" %2d", increment);
+                increment += step;
+            }
+            System.out.println();
+        }
+
+    }
+
     public static void main(String[] args) {
         App app = new App();
-        app.generateNumericSquareWithEnumeration(5);
+        app.generateNumericSquareWithEnumerationStartWithStepValue(5, 2);
     }
 }
