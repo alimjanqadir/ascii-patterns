@@ -129,8 +129,57 @@ public class App {
 
     }
 
+    public void generateNumericSquareEnumeratesWithRowIndex(int base) {
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.printf(" %2d", (j + 1) * (i + 1));
+            }
+            System.out.println();
+        }
+    }
+
+    public void generateNumericSquareOrderedVertically(int base) {
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < base; j++) {
+                System.out.printf(" %d", i + 1);
+            }
+            System.out.println();
+        }
+    }
+
+    public void generateNumericSquareOrderedVerticallyWhenColumnIndexIsEven(int base) {
+        for (int i = 0; i < base; i++) {
+            int incrementerA = i + 1;
+            int incrementerB = 1;
+            for (int j = 0; j < base; j++) {
+                if (j % 2 == 0)
+                    System.out.printf(" %d", incrementerA);
+                else {
+                    System.out.printf(" %d", incrementerB);
+                    incrementerB += 1;
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public void generateNumericSquareOrderedVerticallyWhenColumnIndexIsOdd(int base) {
+        for (int i = 0; i < base; i++) {
+            int incrementerA = i + 1;
+            int incrementerB = 1;
+            for (int j = 0; j < base; j++) {
+                if (j % 2 == 1)
+                    System.out.printf(" %d", incrementerA);
+                else {
+                    System.out.printf(" %d", incrementerB);
+                    incrementerB += 1;
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         App app = new App();
-        app.generateNumericSquareWithEnumerationStartWithStepValue(5, 2);
     }
 }
