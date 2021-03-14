@@ -152,5 +152,24 @@ fun generateNumericSquareOrderedVerticallyWhenColumnIndexIsEven(base: Int) {
         }
         println()
     }
+
+}
+
+fun generateNumericSquareOrderVerticallyInZigZagFashionStartFromTop(base: Int) {
+    for (i in 0 until base) {
+        for (j in 0 until base) {
+            print(" %2d".format(i + 1 + base * j))
+        }
+        println()
+    }
+}
+
+fun generateNumericSquareOrderVerticallyInZigZagFashionStartFromBottom(base: Int) {
+    for (i in base downTo 1) {
+        for (j in 0 until base) {
+            print(" %2d".format(i + base * j))
+        }
+        println()
+    }
 }
 

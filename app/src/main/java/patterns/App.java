@@ -6,6 +6,6 @@ package patterns;
 public class App {
 
     public static void main(String[] args) {
-        PyramidGenerator.generatePyramid(5);
+        SquareGenerator.generateNumericSquareOrderVerticallyInZigZagFashionStartFromBottom(5);
     }
 }
