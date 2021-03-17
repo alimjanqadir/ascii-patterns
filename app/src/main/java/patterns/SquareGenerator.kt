@@ -173,3 +173,29 @@ fun generateNumericSquareOrderVerticallyInZigZagFashionStartFromBottom(base: Int
     }
 }
 
+
+fun generateNumericSquareOrderedVerticallyInSnakeFactionStartFromTop(base: Int) {
+    repeat(base) { i ->
+        repeat(base) { j ->
+            if (j % 2 == 0) {
+                print(" %2d".format(i + 1 + j * base))
+            } else {
+                print(" %2d".format(((j + 1) * base) - i))
+            }
+        }
+        println()
+    }
+}
+
+fun generateNumericSquareOrderedVerticallyInSnakeFactionStartFromBottom(base: Int) {
+    repeat(base) { i ->
+        repeat(base) { j ->
+            if (j % 2 == 0) {
+                print(" %2d".format((base * (j + 1)) - i))
+            } else {
+                print(" %2d".format((base * j) + i + 1))
+            }
+        }
+        println()
+    }
+}

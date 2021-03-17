@@ -6,6 +6,8 @@ package patterns;
 public class App {
 
     public static void main(String[] args) {
-        SquareGenerator.generateNumericSquareOrderVerticallyInZigZagFashionStartFromBottom(5);
+        SquareGenerator.generateNumericSquareOrderedVerticallyInSnakeFactionStartFromTop(5);
+        System.out.println();
+        SquareGenerator.generateNumericSquareOrderedVerticallyInSnakeFactionStartFromBottom(5);
     }
 }
