@@ -6,8 +6,14 @@ package patterns;
 public class App {
 
     public static void main(String[] args) {
-        SquareGenerator.generateNumericSquareOrderedVerticallyInSnakeFactionStartFromTop(5);
+        SquareGenerator.generateNumericSquareThatIncrementsRowOrderingByOne(5);
         System.out.println();
-        SquareGenerator.generateNumericSquareOrderedVerticallyInSnakeFactionStartFromBottom(5);
+        SquareGenerator.generateNumericSquareThatIncrementsRowOrderingByStep(5);
+        System.out.println();
+        SquareGenerator.generateNumericSquareThatIncrementsRowOrderingByStep(5, 2);
+        System.out.println();
+        SquareGenerator.generateNumericSquareThatIncrementsRowOrderingByStep(5, 3);
+        System.out.println();
+        SquareGenerator.generateNumericSquareThatIncrementsRowOrderingByStep(5, 5);
     }
 }

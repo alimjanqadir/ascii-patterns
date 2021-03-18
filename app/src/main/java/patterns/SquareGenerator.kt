@@ -193,9 +193,32 @@ fun generateNumericSquareOrderedVerticallyInSnakeFactionStartFromBottom(base: In
             if (j % 2 == 0) {
                 print(" %2d".format((base * (j + 1)) - i))
             } else {
-                print(" %2d".format((base * j) + i + 1))
+                print(" %2d".format((base * j) + (i + 1)))
             }
         }
+        println()
+    }
+}
+
+fun generateNumericSquareThatIncrementsRowOrderingByOne(base: Int) {
+    repeat(base) { i ->
+        repeat(base) { j ->
+            print(" %2d".format((j + 1) + i))
+        }
+        println()
+    }
+}
+
+@JvmOverloads
+fun generateNumericSquareThatIncrementsRowOrderingByStep(base: Int, step: Int = 1) {
+    var rowCounter = 0
+    repeat(base) {
+        var columnCounter = 1
+        repeat(base) {
+            print(" %2d".format(columnCounter + rowCounter))
+            columnCounter += step
+        }
+        rowCounter += step
         println()
     }
 }
